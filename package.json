@@ -1,12 +1,13 @@
 {
-  "name": "loopback-component-bunyan",
+  "name": "@sixriver/loopback-component-bunyan",
   "version": "0.0.2",
   "description": "Bunyan logger component for loopback",
   "main": "index.js",
   "scripts": {
     "pretest": "eslint .",
     "test": "./node_modules/.bin/mocha",
-    "test:debug": "npm run test -- --debug-brk"
+    "test:debug": "npm run test -- --debug-brk",
+		"manual:publish": "npm test && publish"
   },
   "repository": {
     "type": "git",
@@ -41,5 +42,8 @@
     "sinon": "1.17.6",
     "sinon-chai": "2.8.0",
     "supertest": "2.0.1"
-  }
+  },
+	"publishConfig": {
+		"registry": "https://sixriver.jfrog.io/sixriver/npm-local/"
+	}
 }
